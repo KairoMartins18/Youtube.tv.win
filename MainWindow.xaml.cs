@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CefSharp.Wpf;
+using CefSharp;
 
 namespace Youtube.tv.win
 {
@@ -23,6 +25,17 @@ namespace Youtube.tv.win
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnclose_Click(object sender, RoutedEventArgs e)
+        {
+            var dlg = new MainWindow();
+            dlg.Close();
+        }
+
+        private void ui_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Cef.Shutdown();
         }
     }
 }

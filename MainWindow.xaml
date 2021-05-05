@@ -1,12 +1,16 @@
-﻿<Window x:Class="Youtube.tv.win.MainWindow"
+﻿<Window x:Name="ui" x:Class="Youtube.tv.win.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Youtube.tv.win"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Youtube Tv Laucher" Height="570.492" Width="1115.984" Icon="youtube_logo_icon_147199.ico" AllowsTransparency="True" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen" Closing="ui_Closing">
     <Grid>
-        
+        <Grid x:Name="layertop" Margin="1,1,0,0" Background="#FF950C0C" Height="17" VerticalAlignment="Top">
+            <Button x:Name="btnclose" Content="" HorizontalAlignment="Right" Margin="0,0,40,0" Width="1074" Background="{x:Null}" BorderThickness="2" BorderBrush="#FFF92C2C" Height="16" VerticalAlignment="Top" Click="btnclose_Click"/>
+            <Button x:Name="btnclose_Copy" Content="" Margin="1073,0,2,0" Background="{x:Null}" BorderThickness="2" BorderBrush="#FFF92C2C" Height="16" VerticalAlignment="Top"/>
+        </Grid>
+
     </Grid>
 </Window>
