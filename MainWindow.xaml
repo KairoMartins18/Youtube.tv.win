@@ -1,4 +1,5 @@
 ﻿<Window x:Name="ui" x:Class="Youtube.tv.win.MainWindow"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,10 +8,15 @@
         mc:Ignorable="d"
         Title="Youtube Tv Laucher" Height="570.492" Width="1115.984" Icon="youtube_logo_icon_147199.ico" AllowsTransparency="True" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen" Closing="ui_Closing">
     <Grid>
-        <Grid x:Name="layertop" Margin="1,1,0,0" Background="#FF950C0C" Height="17" VerticalAlignment="Top">
-            <Button x:Name="btnclose" Content="" HorizontalAlignment="Right" Margin="0,0,40,0" Width="1074" Background="{x:Null}" BorderThickness="2" BorderBrush="#FFF92C2C" Height="16" VerticalAlignment="Top" Click="btnclose_Click"/>
-            <Button x:Name="btnclose_Copy" Content="" Margin="1073,0,2,0" Background="{x:Null}" BorderThickness="2" BorderBrush="#FFF92C2C" Height="16" VerticalAlignment="Top"/>
+        <Grid x:Name="layertop" Margin="1,1,0,0" Background="#FF950C0C" Height="32" VerticalAlignment="Top" RenderTransformOrigin="0.375,0.74">
+            <Button x:Name="btnclose" Content="" Margin="0,5,29,7" BorderThickness="2" BorderBrush="{x:Null}" Click="btnclose_Click" HorizontalAlignment="Right" Width="25">
+                <Button.Background>
+                    <ImageBrush ImageSource="close_window_100px.png" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
         </Grid>
-
+        <Border BorderBrush="#FF550707" BorderThickness="0,1" Margin="0,32,0,0">
+            <wpf:ChromiumWebBrowser x:Name="Browser" Address="www.youtube.com/tv#" Margin="0,1,0,0"/>
+        </Border>
     </Grid>
 </Window>

@@ -115,6 +115,9 @@
   <ItemGroup>
     <Resource Include="youtube_logo_icon_147199.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="close_window_100px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
