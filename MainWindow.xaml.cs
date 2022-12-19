@@ -29,8 +29,7 @@ namespace Youtube.tv.win
 
         private void btnclose_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            Cef.Shutdown();
+           
         }
 
         private void ui_Closing(object sender, System.ComponentModel.CancelEventArgs e)
