@@ -36,5 +36,33 @@ namespace Youtube.tv.win
         {
             Cef.Shutdown();
         }
+        bool telacheia = false;
+        private void ui_KeyDown(object sender, KeyEventArgs e)
+        {
+         
+            if (e.Key == Key.F11)
+            {
+
+                if (telacheia == false)
+                {
+                    this.Topmost = true;
+                    this.WindowState = WindowState.Maximized;
+                    this.WindowStyle = WindowStyle.None;
+                    telacheia = true;
+                }
+                else
+                {
+
+                    this.WindowState = WindowState.Normal;
+                    this.WindowStyle = WindowStyle.ThreeDBorderWindow;
+                    this.Topmost = false;
+                    telacheia = false;
+
+                }
+
+            }          
+           
+                                                                                       
+        }
     }
 }

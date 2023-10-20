@@ -8,10 +8,14 @@
         xmlns:local="clr-namespace:Youtube.tv.win"
         mc:Ignorable="d"
         
-        Title="YT tv" Height="570.492" Width="1115.984" Icon="youtube_logo_icon_147199.ico" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" WindowStartupLocation="CenterScreen" Closing="ui_Closing">
-    <Grid>
-        <Border BorderThickness="0,1">
-            <wpf:ChromiumWebBrowser x:Name="Browser" Address="www.youtube.com/tv#" Margin="0,1,0,0" Foreground="{x:Null}"/>
+        Title="YT TV MODE (BY @KAIRO18)" Height="570.492" Width="1115.984" Icon="youtube_logo_icon_147199.ico" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" WindowStartupLocation="CenterScreen" Closing="ui_Closing" KeyDown="ui_KeyDown">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="0,1" Grid.RowSpan="1" Grid.ColumnSpan="2">
+            <wpf:ChromiumWebBrowser x:Name="Browser" Address="www.youtube.com/tv#" Foreground="{x:Null}" Background="#FFF5EBEB"/>
         </Border>
     </Grid>
 </Window>
